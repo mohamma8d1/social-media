@@ -1,0 +1,9 @@
+.idea/
+media/
+
+**/__pycache__/
+*.pyc
+
+db.mysql
+
+local_setting.py
