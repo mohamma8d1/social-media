@@ -14,9 +14,7 @@ class Country(models.Model):
         verbose_name_plural = 'Countries'
         db_table = 'countries'
 
-
-
-
+    
 class Profile(models.Model):
     user = models.OneToOneField(to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     phone_number = models.BigIntegerField(blank=True,null=True,unique=True)
@@ -40,3 +38,6 @@ class Device(models.Model):
     device_model = models.CharField('device model', max_length=50, blank=True)
     app_version = models.CharField('app version', max_length=20, blank=True)
     created_time = models.DateTimeField(auto_now_add=True)
+
+
+
