@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import timedelta
 
 from .local_setting import *
 
@@ -15,6 +16,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'accounts',
+    'posts',
+    'friendship',
 ]
 
 MIDDLEWARE = [
@@ -74,6 +77,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Tehran'
@@ -92,4 +97,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME' : timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME' : timedelta(days=3),
 }

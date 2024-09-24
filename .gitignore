@@ -7,3 +7,5 @@
 db.mysql
 
 local_setting.py
+
+*.jpg
