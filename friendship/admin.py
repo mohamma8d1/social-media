@@ -3,5 +3,12 @@ from .models import Friendship
 
 @admin.register(Friendship)
 class FrienshipAdmin(admin.ModelAdmin):
-    pass
-    #13:51
+    list_display = ['request_from' , 'request_to' , 'accepted' , 'created_time']
+    actions = False
+
+    def has_add_permission(self, request):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+    
